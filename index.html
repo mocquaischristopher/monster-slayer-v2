@@ -1,0 +1,72 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/sass/main.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+  
+  <!-- Add your site or application content here -->
+  <h1>Monster Slayer</h1>
+
+<section class="header">
+  <article class="player">
+    <h2>YOU</h2>
+    <aside class="you">
+      <label for="pvYou">Health : <span class="pvYou">100</span>%</label>
+      <progress id="pvYou" min="0" max="100" value="100">100</progress>
+    </aside>
+  </article>
+  <article class="no-player">
+    <h2>MONSTER</h2>
+    <aside class="monster">
+      <label for="pvMonster">Health : <span class="pvMonster">100</span>%</label>
+      <progress id="pvMonster" min="0" max="100" value="100">100</progress>
+    </aside>
+  </article>
+</section>
+
+<section class="button">
+  <button class="start">START NEW GAME</button>
+</section>
+<section class="buttons">
+  <button class="attack">ATTACK</button>
+  <button class="specialAttack">SPECIAL ATTACK</button>
+  <button class="heal">HEAL</button>
+  <button class="giveUp">GIVE UP</button>
+</section>
+
+<section class="log">
+</section>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>

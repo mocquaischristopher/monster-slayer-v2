@@ -1,0 +1,147 @@
+body {
+  background-image: url("../../img/fond.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  color: sandybrown;
+  text-align: center;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+}
+
+.header .player {
+  grid-area: player;
+}
+
+.header .player h2, .header .player aside {
+  color: cyan;
+}
+
+.header .no-player {
+  grid-area: monster;
+  color: darkblue;
+}
+
+.header progress {
+  -webkit-appearance: none;
+}
+
+.button, .buttons {
+  text-align: center;
+}
+
+.start {
+  background-color: greenyellow;
+}
+
+.attack {
+  background-color: red;
+  color: white;
+}
+
+.specialAttack {
+  background-color: orange;
+}
+
+.heal {
+  background-color: greenyellow;
+}
+
+.giveUp {
+  background-color: grey;
+  color: white;
+}
+
+ul {
+  padding: 0;
+  background-color: honeydew;
+}
+
+ul li {
+  text-decoration: none;
+  list-style: none;
+}
+
+ul .blue {
+  color: darkblue;
+  background-color: deepskyblue;
+}
+
+ul .red {
+  color: red;
+  background-color: pink;
+}
+
+@media (max-width: 480px) {
+  * {
+    text-align: center;
+    font-size: 1rem;
+  }
+  .header {
+    -ms-grid-columns: 1fr 0.25fr 1fr;
+        grid-template-columns: 1fr 0.25fr 1fr;
+    -ms-grid-rows: 1fr 0.25fr;
+        grid-template-rows: 1fr 0.25fr;
+        grid-template-areas: "player . monster" ". . .";
+  }
+  .header .player h2, .header .player aside {
+    color: cyan;
+  }
+  .header .no-player h2, .header .no-player aside {
+    color: cyan;
+  }
+}
+
+@media (min-width: 481px) {
+  * {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+  .header {
+    -ms-grid-columns: 1fr 0.25fr 1fr;
+        grid-template-columns: 1fr 0.25fr 1fr;
+    -ms-grid-rows: 1fr 0.25fr;
+        grid-template-rows: 1fr 0.25fr;
+        grid-template-areas: "player . monster" ". . .";
+  }
+  .header .player h2, .header .player aside {
+    color: cyan;
+  }
+  .header .no-player h2, .header .no-player aside {
+    color: cyan;
+  }
+}
+
+@media (min-width: 769px) {
+  * {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .header {
+    -ms-grid-columns: 1fr 0.5fr 1fr;
+        grid-template-columns: 1fr 0.5fr 1fr;
+    -ms-grid-rows: 1fr 0.5fr;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: "player . monster" ". . .";
+  }
+}
+
+@media (min-width: 1280px) {
+  * {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+  .header {
+    -ms-grid-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: ". player . monster ." ". . . . .";
+  }
+}
+/*# sourceMappingURL=main.css.map */

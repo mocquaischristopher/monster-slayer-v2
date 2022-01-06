@@ -1,0 +1,143 @@
+body {
+    background-image: url("../../img/fond.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+h1 {
+    color: $colour-title;
+    text-align: center;
+}
+.header {
+    display: grid;
+    & .player {
+        grid-area: player;
+        & h2, aside {
+            color: $colour-player;
+        }
+    }
+    & .no-player {
+        grid-area: monster;
+        color: $colour-monster;
+    }
+    & progress {
+        -webkit-appearance: none;
+    }
+}
+.button, .buttons {
+    text-align: center;
+}
+.start{
+    background-color: $colour-button;
+}
+.attack{
+    background-color: red;
+    color: white;
+}
+.specialAttack {
+    background-color: orange;
+
+}
+.heal {
+    background-color: $colour-button;
+
+}
+.giveUp {
+    background-color: grey;
+    color: white;
+}
+ul {
+    padding: 0;
+    background-color: honeydew;
+    & li {
+        text-decoration: none;
+        list-style: none;
+    }
+    & .blue {
+        color: darkblue;
+        background-color: deepskyblue;
+    }
+    & .red {
+        color: red;
+        background-color: pink;
+    }
+}
+
+@include for-phone-portrait {
+    * {
+        text-align: center;
+        font-size: 1rem;
+    }
+    .header {
+        grid-template-columns: 1fr 0.25fr 1fr;
+        grid-template-rows: 1fr 0.25fr;
+        grid-template-areas: 
+        "player . monster"
+        ". . ."
+        ;
+        & .player {
+            & h2, aside {
+                color: $colour-player;
+            }
+        }
+        & .no-player {
+            & h2, aside {
+                color: $colour-player;
+            }
+        }
+    }
+}
+
+@include for-phone-paysage-and-tablet-portrait {
+    * {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+    .header {
+        grid-template-columns: 1fr 0.25fr 1fr;
+        grid-template-rows: 1fr 0.25fr;
+        grid-template-areas: 
+        "player . monster"
+        ". . ."
+        ;
+        & .player {
+            & h2, aside {
+                color: $colour-player;
+            }
+        }
+        & .no-player {
+            & h2, aside {
+                color: $colour-player;
+            }
+        }
+    }
+}
+
+@include for-tablet-portrait {
+    * {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .header {
+        grid-template-columns: 1fr 0.5fr 1fr;
+        grid-template-rows: 1fr 0.5fr;
+        grid-template-areas: 
+        "player . monster"
+        ". . ."
+        ;
+    }
+}
+
+@include for-desktop {
+    * {
+        font-size: 1.75rem;
+        text-align: center;
+    }
+    .header {
+        grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        ". player . monster ."
+        ". . . . ."
+        ;
+    }
+}
