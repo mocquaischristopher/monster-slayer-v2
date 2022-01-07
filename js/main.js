@@ -84,7 +84,7 @@ class Personnage {
     
     win() {
         if( this._pv <= 0){
-            if(confirm(this.name + " loose the game, new game?")){
+            if(confirm (this.name + " loose the game, new game?")){
                 turn.innerHTML = "";
                 buttons.hidden = true;
                 startButton.hidden = false;
@@ -149,7 +149,6 @@ class Actions {
         if(this.monster.pv > 0) {
             this.you.pv -= this.monster.attack();
         }
-        console.log(this.monster.pv, this.you.pv)
     }
 
     heal() {
@@ -159,15 +158,10 @@ class Actions {
     }
 
     giveUp() {
-
         if(confirm("YOU are give up, new game?")){
             turn.innerHTML = "";
             buttons.hidden = true;
-            startButton.hidden = false;
-        }else{
-            attackButton.disabled = true;
-            specialButton.disabled = true;
-            healButton.disabled = true;
+            startButton.hidden = false; 
         }
     }
 
