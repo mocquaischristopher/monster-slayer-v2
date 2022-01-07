@@ -1,7 +1,9 @@
 body {
     background-image: url("../../img/fond.png");
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
+    position: absolute;
+    background-color: black;
 }
 h1 {
     color: $colour-title;
